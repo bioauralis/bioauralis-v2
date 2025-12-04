@@ -4,37 +4,37 @@ import Hero from "../components/Hero";
 import Section from "../components/Section";
 import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact"; // <--- Importamos el componente
 
 import luciernaga1 from "../assets/luciernaga1.jpg";
 import luciernaga2 from "../assets/luciernaga2.jpg";
 import luciernaga3 from "../assets/luciernaga3.jpg";
 
-// ... imports iguales ...
-import { motion } from "framer-motion"; // Importa framer-motion si quieres animar títulos también
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="bg-slate-50 overflow-x-hidden"> {/* Previene scroll horizontal accidental */}
+    <div className="bg-slate-50 overflow-x-hidden">
       <Header />
       <Hero /> 
 
-      {/* Secciones Informativas (Fondo Claro) */}
+      {/* Secciones Informativas */}
       <main className="max-w-4xl mx-auto px-6 py-24 space-y-32">
         <Section
           id="quienes-somos"
           title="Nuestra Misión"
-          text="BioAuralis es una organización dedicada a la conservación de los hábitats naturales..."
+          text="BioAuralis es una organización dedicada a la conservación de los hábitats naturales de los insectos, con un enfoque especial en la protección de las luciérnagas. Promovemos la investigación, la educación ambiental y la restauración de ecosistemas luminosos."
         />
         <Section
           id="como-ayudar"
           title="Tu impacto importa"
-          text="Podés participar en programas de restauración, apadrinar hábitats..."
+          text="Podés participar en programas de restauración, apadrinar hábitats, difundir la importancia de las luciérnagas o contribuir económicamente para mantener las campañas de conservación."
         />
       </main>
 
-      {/* Sección Proyectos (Fondo OSCURO para resaltar las fotos) */}
+      {/* Sección Proyectos */}
       <div id="proyectos" className="bg-slate-900 py-24 mt-16 relative">
-        {/* Decoración de luz de fondo (opcional) */}
+        {/* Decoración de luz de fondo */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-emerald-500/5 blur-[120px] pointer-events-none" />
         
         <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -67,8 +67,9 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Sección Contacto integrada */}
       <div className="max-w-4xl mx-auto px-6 pt-16">
-         {/* Aquí irá el Contacto renderizado por App.jsx o muévelo aquí dentro si prefieres */}
+         <Contact /> 
       </div>
 
       <Footer />
